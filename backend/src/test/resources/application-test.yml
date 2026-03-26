@@ -1,0 +1,18 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:renteasy_test;MODE=MySQL;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    open-in-view: false
+
+app:
+  security:
+    jwt:
+      issuer: "renteasy-test"
+      secret: "TEST_SECRET__use_a_long_random_secret_at_least_64_chars___________"
+      access-token-exp-minutes: 60
+
